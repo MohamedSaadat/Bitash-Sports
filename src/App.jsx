@@ -24,7 +24,7 @@ const router = createBrowserRouter([
 
 export default function App() {
   return (
-    <div className="min-h-screen w-full relative flex items-center pt-26.25 text-center text-white flex-col gap-10 bg-linear-to-br from-[#0C0C0C] via-[#a3d706] to-[#0C0C0C]">
+    <div className="min-h-screen w-full relative flex items-center pt-23 text-center text-white flex-col gap-10 bg-linear-to-br from-[#0C0C0C] via-[#a3d706] to-[#0C0C0C]">
       <RouterProvider router={router} />
     </div>
   );
