@@ -1,7 +1,8 @@
-import React from 'react'
+import React from "react";
+import Clock from "../components/Clock";
 
 export default function Overview() {
   return (
-    <div>Overview</div>
-  )
+    <h1>Overview</h1>
+  );
 }
