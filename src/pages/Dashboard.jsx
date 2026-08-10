@@ -21,10 +21,10 @@ export default function Dashboard() {
           {/* Serial Number */}
           <div className="flex items-center justify-center gap-1">
             <input
-              type="text"
+              type="number"
               defaultValue="99999"
-              // readOnly
-              className="w-15 p-2 bg-[#1f2937] text-[#a3d706] placeholder:text-gray-400 border border-gray-600 rounded-lg outline-none focus:border-[#a3d706] focus:ring-1 focus:ring-[#a3d706] transition-all duration-200 text-center"
+              readOnly
+              className="w-15 p-2 me-1 bg-[#1f2937] text-[#a3d706] placeholder:text-gray-400 border border-gray-600 rounded-lg outline-none focus:border-[#a3d706] focus:ring-1 focus:ring-[#a3d706] transition-all duration-200 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none text-center"
             />
             <p>Serial Number</p>
           </div>
@@ -32,9 +32,9 @@ export default function Dashboard() {
           {/* Month Title */}
           <div className="flex items-center justify-center gap-1">
             <input
-              type="text"
+              type="number"
               defaultValue="8"
-              className="w-15 p-2 bg-[#1f2937] text-[#a3d706] placeholder:text-gray-400 border border-gray-600 rounded-lg outline-none focus:border-[#a3d706] focus:ring-1 focus:ring-[#a3d706] transition-all duration-200 text-center"
+              className="w-12 p-2 me-1 bg-[#1f2937] text-[#a3d706] placeholder:text-gray-400 border border-gray-600 rounded-lg outline-none focus:border-[#a3d706] focus:ring-1 focus:ring-[#a3d706] transition-all duration-200 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none text-center"
             />
             <p>قيمة الاشتراك فى الانشطة الرياضية حتى نهاية شهر</p>
           </div>
@@ -92,9 +92,10 @@ export default function Dashboard() {
             className="w-full sm:flex-1 px-4 py-2 bg-[#1f2937] text-[#a3d706] placeholder:text-gray-400 border border-gray-600 rounded-lg outline-none focus:border-[#a3d706] focus:ring-1 focus:ring-[#a3d706] transition-all duration-200"
           />
           <input
-            type="text"
+            type="number"
+            // اعمله string فى js
             placeholder="Phone Number"
-            className="w-full sm:flex-1 px-4 py-2 bg-[#1f2937] text-[#a3d706] placeholder:text-gray-400 border border-gray-600 rounded-lg outline-none focus:border-[#a3d706] focus:ring-1 focus:ring-[#a3d706] transition-all duration-200"
+            className="w-full sm:flex-1 px-4 py-2 bg-[#1f2937] text-[#a3d706] placeholder:text-gray-400 border border-gray-600 rounded-lg outline-none focus:border-[#a3d706] focus:ring-1 focus:ring-[#a3d706] transition-all duration-200 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none text-center"
           />
         </div>
 
@@ -110,9 +111,9 @@ export default function Dashboard() {
             </label>
             <input
               id="سباحة"
-              type="text"
-              name="name"
-              className="w-full sm:flex-1 px-4 py-2 bg-[#1f2937] text-[#a3d706] placeholder:text-gray-400 border border-gray-600 rounded-lg outline-none focus:border-[#a3d706] focus:ring-1 focus:ring-[#a3d706] transition-all duration-200"
+              type="number"
+              name="سباحة"
+              className="w-full sm:flex-1 px-4 py-2 bg-[#1f2937] text-[#a3d706] placeholder:text-gray-400 border border-gray-600 rounded-lg outline-none focus:border-[#a3d706] focus:ring-1 focus:ring-[#a3d706] transition-all duration-200 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none text-center"
             />
           </div>
           {/* اضافى سباحة */}
@@ -125,9 +126,9 @@ export default function Dashboard() {
             </label>
             <input
               id="اضافى سباحة"
-              type="text"
-              name="name"
-              className="w-full sm:flex-1 px-4 py-2 bg-[#1f2937] text-[#a3d706] placeholder:text-gray-400 border border-gray-600 rounded-lg outline-none focus:border-[#a3d706] focus:ring-1 focus:ring-[#a3d706] transition-all duration-200"
+              type="number"
+              name="اضافى سباحة"
+              className="w-full sm:flex-1 px-4 py-2 bg-[#1f2937] text-[#a3d706] placeholder:text-gray-400 border border-gray-600 rounded-lg outline-none focus:border-[#a3d706] focus:ring-1 focus:ring-[#a3d706] transition-all duration-200 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none text-center"
             />
           </div>
           {/* جمباز */}
@@ -140,9 +141,9 @@ export default function Dashboard() {
             </label>
             <input
               id="جمباز"
-              type="text"
-              name="name"
-              className="w-full sm:flex-1 px-4 py-2 bg-[#1f2937] text-[#a3d706] placeholder:text-gray-400 border border-gray-600 rounded-lg outline-none focus:border-[#a3d706] focus:ring-1 focus:ring-[#a3d706] transition-all duration-200"
+              type="number"
+              name="جمباز"
+              className="w-full sm:flex-1 px-4 py-2 bg-[#1f2937] text-[#a3d706] placeholder:text-gray-400 border border-gray-600 rounded-lg outline-none focus:border-[#a3d706] focus:ring-1 focus:ring-[#a3d706] transition-all duration-200 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none text-center"
             />
           </div>
           {/* فتنس جمباز */}
@@ -155,9 +156,9 @@ export default function Dashboard() {
             </label>
             <input
               id="فتنس جمباز"
-              type="text"
-              name="name"
-              className="w-full sm:flex-1 px-4 py-2 bg-[#1f2937] text-[#a3d706] placeholder:text-gray-400 border border-gray-600 rounded-lg outline-none focus:border-[#a3d706] focus:ring-1 focus:ring-[#a3d706] transition-all duration-200"
+              type="number"
+              name="فتنس جمباز"
+              className="w-full sm:flex-1 px-4 py-2 bg-[#1f2937] text-[#a3d706] placeholder:text-gray-400 border border-gray-600 rounded-lg outline-none focus:border-[#a3d706] focus:ring-1 focus:ring-[#a3d706] transition-all duration-200 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none text-center"
             />
           </div>
           {/* كارتيه */}
@@ -170,9 +171,9 @@ export default function Dashboard() {
             </label>
             <input
               id="كارتيه"
-              type="text"
-              name="name"
-              className="w-full sm:flex-1 px-4 py-2 bg-[#1f2937] text-[#a3d706] placeholder:text-gray-400 border border-gray-600 rounded-lg outline-none focus:border-[#a3d706] focus:ring-1 focus:ring-[#a3d706] transition-all duration-200"
+              type="number"
+              name="كاراتيه"
+              className="w-full sm:flex-1 px-4 py-2 bg-[#1f2937] text-[#a3d706] placeholder:text-gray-400 border border-gray-600 rounded-lg outline-none focus:border-[#a3d706] focus:ring-1 focus:ring-[#a3d706] transition-all duration-200 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none text-center"
             />
           </div>
           {/* كونج فو */}
@@ -185,9 +186,9 @@ export default function Dashboard() {
             </label>
             <input
               id="كونج فو"
-              type="text"
-              name="name"
-              className="w-full sm:flex-1 px-4 py-2 bg-[#1f2937] text-[#a3d706] placeholder:text-gray-400 border border-gray-600 rounded-lg outline-none focus:border-[#a3d706] focus:ring-1 focus:ring-[#a3d706] transition-all duration-200"
+              type="number"
+              name="كونج فو"
+              className="w-full sm:flex-1 px-4 py-2 bg-[#1f2937] text-[#a3d706] placeholder:text-gray-400 border border-gray-600 rounded-lg outline-none focus:border-[#a3d706] focus:ring-1 focus:ring-[#a3d706] transition-all duration-200 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none text-center"
             />
           </div>
           {/* تايكوندو */}
@@ -200,9 +201,9 @@ export default function Dashboard() {
             </label>
             <input
               id="تايكوندو"
-              type="text"
-              name="name"
-              className="w-full sm:flex-1 px-4 py-2 bg-[#1f2937] text-[#a3d706] placeholder:text-gray-400 border border-gray-600 rounded-lg outline-none focus:border-[#a3d706] focus:ring-1 focus:ring-[#a3d706] transition-all duration-200"
+              type="number"
+              name="تايكوندو"
+              className="w-full sm:flex-1 px-4 py-2 bg-[#1f2937] text-[#a3d706] placeholder:text-gray-400 border border-gray-600 rounded-lg outline-none focus:border-[#a3d706] focus:ring-1 focus:ring-[#a3d706] transition-all duration-200 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none text-center"
             />
           </div>
           {/* كرة قدم */}
@@ -215,9 +216,9 @@ export default function Dashboard() {
             </label>
             <input
               id="كرة قدم"
-              type="text"
-              name="name"
-              className="w-full sm:flex-1 px-4 py-2 bg-[#1f2937] text-[#a3d706] placeholder:text-gray-400 border border-gray-600 rounded-lg outline-none focus:border-[#a3d706] focus:ring-1 focus:ring-[#a3d706] transition-all duration-200"
+              type="number"
+              name="كرة قدم"
+              className="w-full sm:flex-1 px-4 py-2 bg-[#1f2937] text-[#a3d706] placeholder:text-gray-400 border border-gray-600 rounded-lg outline-none focus:border-[#a3d706] focus:ring-1 focus:ring-[#a3d706] transition-all duration-200 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none text-center"
             />
           </div>
           {/* كيك بوكس */}
@@ -230,9 +231,9 @@ export default function Dashboard() {
             </label>
             <input
               id="كيك بوكس"
-              type="text"
-              name="name"
-              className="w-full sm:flex-1 px-4 py-2 bg-[#1f2937] text-[#a3d706] placeholder:text-gray-400 border border-gray-600 rounded-lg outline-none focus:border-[#a3d706] focus:ring-1 focus:ring-[#a3d706] transition-all duration-200"
+              type="number"
+              name="كيك بوكس"
+              className="w-full sm:flex-1 px-4 py-2 bg-[#1f2937] text-[#a3d706] placeholder:text-gray-400 border border-gray-600 rounded-lg outline-none focus:border-[#a3d706] focus:ring-1 focus:ring-[#a3d706] transition-all duration-200 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none text-center"
             />
           </div>
         </div>
@@ -249,9 +250,9 @@ export default function Dashboard() {
             </label>
             <input
               id="نجمة اولى"
-              type="text"
-              name="name"
-              className="w-full sm:flex-1 px-4 py-2 bg-[#1f2937] text-[#a3d706] placeholder:text-gray-400 border border-gray-600 rounded-lg outline-none focus:border-[#a3d706] focus:ring-1 focus:ring-[#a3d706] transition-all duration-200"
+              type="number"
+              name="نجمه اولى"
+              className="w-full sm:flex-1 px-4 py-2 bg-[#1f2937] text-[#a3d706] placeholder:text-gray-400 border border-gray-600 rounded-lg outline-none focus:border-[#a3d706] focus:ring-1 focus:ring-[#a3d706] transition-all duration-200 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none text-center"
             />
           </div>
           {/* نجمة تانية */}
@@ -264,9 +265,9 @@ export default function Dashboard() {
             </label>
             <input
               id="نجمة تانية"
-              type="text"
-              name="name"
-              className="w-full sm:flex-1 px-4 py-2 bg-[#1f2937] text-[#a3d706] placeholder:text-gray-400 border border-gray-600 rounded-lg outline-none focus:border-[#a3d706] focus:ring-1 focus:ring-[#a3d706] transition-all duration-200"
+              type="number"
+              name="نجمه تانية"
+              className="w-full sm:flex-1 px-4 py-2 bg-[#1f2937] text-[#a3d706] placeholder:text-gray-400 border border-gray-600 rounded-lg outline-none focus:border-[#a3d706] focus:ring-1 focus:ring-[#a3d706] transition-all duration-200 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none text-center"
             />
           </div>
           {/* نجمة تالتة */}
@@ -279,9 +280,9 @@ export default function Dashboard() {
             </label>
             <input
               id="نجمة تالتة"
-              type="text"
-              name="name"
-              className="w-full sm:flex-1 px-4 py-2 bg-[#1f2937] text-[#a3d706] placeholder:text-gray-400 border border-gray-600 rounded-lg outline-none focus:border-[#a3d706] focus:ring-1 focus:ring-[#a3d706] transition-all duration-200"
+              type="number"
+              name="نجمه تالتة"
+              className="w-full sm:flex-1 px-4 py-2 bg-[#1f2937] text-[#a3d706] placeholder:text-gray-400 border border-gray-600 rounded-lg outline-none focus:border-[#a3d706] focus:ring-1 focus:ring-[#a3d706] transition-all duration-200 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none text-center"
             />
           </div>
           {/* نجمة رابعة */}
@@ -294,9 +295,9 @@ export default function Dashboard() {
             </label>
             <input
               id="نجمة رابعة"
-              type="text"
-              name="name"
-              className="w-full sm:flex-1 px-4 py-2 bg-[#1f2937] text-[#a3d706] placeholder:text-gray-400 border border-gray-600 rounded-lg outline-none focus:border-[#a3d706] focus:ring-1 focus:ring-[#a3d706] transition-all duration-200"
+              type="number"
+              name="نجمة رابعة"
+              className="w-full sm:flex-1 px-4 py-2 bg-[#1f2937] text-[#a3d706] placeholder:text-gray-400 border border-gray-600 rounded-lg outline-none focus:border-[#a3d706] focus:ring-1 focus:ring-[#a3d706] transition-all duration-200 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none text-center"
             />
           </div>
           {/* اتحاد قصيرة */}
@@ -309,9 +310,9 @@ export default function Dashboard() {
             </label>
             <input
               id="اتحاد قصيرة"
-              type="text"
-              name="name"
-              className="w-full sm:flex-1 px-4 py-2 bg-[#1f2937] text-[#a3d706] placeholder:text-gray-400 border border-gray-600 rounded-lg outline-none focus:border-[#a3d706] focus:ring-1 focus:ring-[#a3d706] transition-all duration-200"
+              type="number"
+              name="اتحاد قصيرة"
+              className="w-full sm:flex-1 px-4 py-2 bg-[#1f2937] text-[#a3d706] placeholder:text-gray-400 border border-gray-600 rounded-lg outline-none focus:border-[#a3d706] focus:ring-1 focus:ring-[#a3d706] transition-all duration-200 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none text-center"
             />
           </div>
           {/* اتحاد زعانف */}
@@ -324,9 +325,9 @@ export default function Dashboard() {
             </label>
             <input
               id="اتحاد زعانف"
-              type="text"
-              name="name"
-              className="w-full sm:flex-1 px-4 py-2 bg-[#1f2937] text-[#a3d706] placeholder:text-gray-400 border border-gray-600 rounded-lg outline-none focus:border-[#a3d706] focus:ring-1 focus:ring-[#a3d706] transition-all duration-200"
+              type="number"
+              name="اتحاد زعانف"
+              className="w-full sm:flex-1 px-4 py-2 bg-[#1f2937] text-[#a3d706] placeholder:text-gray-400 border border-gray-600 rounded-lg outline-none focus:border-[#a3d706] focus:ring-1 focus:ring-[#a3d706] transition-all duration-200 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none text-center"
             />
           </div>
         </div>
@@ -340,9 +341,9 @@ export default function Dashboard() {
             </label>
             <input
               id="رسوم"
-              type="text"
-              name="name"
-              className="w-full sm:flex-1 px-4 py-2 bg-[#1f2937] text-[#a3d706] placeholder:text-gray-400 border border-gray-600 rounded-lg outline-none focus:border-[#a3d706] focus:ring-1 focus:ring-[#a3d706] transition-all duration-200"
+              type="number"
+              name="رسوم"
+              className="w-full sm:flex-1 px-4 py-2 bg-[#1f2937] text-[#a3d706] placeholder:text-gray-400 border border-gray-600 rounded-lg outline-none focus:border-[#a3d706] focus:ring-1 focus:ring-[#a3d706] transition-all duration-200 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none text-center"
             />
           </div>
           {/* كشف طبى */}
@@ -355,9 +356,9 @@ export default function Dashboard() {
             </label>
             <input
               id="كشف طبى"
-              type="text"
-              name="name"
-              className="w-full sm:flex-1 px-4 py-2 bg-[#1f2937] text-[#a3d706] placeholder:text-gray-400 border border-gray-600 rounded-lg outline-none focus:border-[#a3d706] focus:ring-1 focus:ring-[#a3d706] transition-all duration-200"
+              type="number"
+              name="كشف طبى"
+              className="w-full sm:flex-1 px-4 py-2 bg-[#1f2937] text-[#a3d706] placeholder:text-gray-400 border border-gray-600 rounded-lg outline-none focus:border-[#a3d706] focus:ring-1 focus:ring-[#a3d706] transition-all duration-200 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none text-center"
             />
           </div>
           {/* مصاريف بطولة سباحة */}
@@ -370,57 +371,58 @@ export default function Dashboard() {
             </label>
             <input
               id="مصاريف بطولة سباحة"
-              type="text"
-              name="name"
-              className="w-full sm:flex-1 px-4 py-2 bg-[#1f2937] text-[#a3d706] placeholder:text-gray-400 border border-gray-600 rounded-lg outline-none focus:border-[#a3d706] focus:ring-1 focus:ring-[#a3d706] transition-all duration-200"
+              type="number"
+              name="مصاريف بطولة سباحة"
+              className="w-full sm:flex-1 px-4 py-2 bg-[#1f2937] text-[#a3d706] placeholder:text-gray-400 border border-gray-600 rounded-lg outline-none focus:border-[#a3d706] focus:ring-1 focus:ring-[#a3d706] transition-all duration-200 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none text-center"
             />
           </div>
         </div>
-        <hr className="w-full border-t border-gray-600 my-4" />
-        <h3 className="text-xl font-bold">Payment Summary</h3>
+
         {/* row 4 */}
-        <div className="flex flex-col sm:flex-row gap-3 w-full">
-          {/* رسوم */}
-          <div className="flex flex-col gap-1.5 w-full max-w-sm">
-            <label htmlFor="رسوم" className="text-sm font-medium text-gray-200">
-              رسوم
-            </label>
+        <div className="w-full flex flex-col gap-3">
+          {/* ملاحظات */}
+          <div className="w-full">
             <input
-              id="رسوم"
+              id="ملاحظات"
               type="text"
-              name="name"
-              className="w-full sm:flex-1 px-4 py-2 bg-[#1f2937] text-[#a3d706] placeholder:text-gray-400 border border-gray-600 rounded-lg outline-none focus:border-[#a3d706] focus:ring-1 focus:ring-[#a3d706] transition-all duration-200"
+              name="ملاحظات"
+              placeholder="ملاحظات"
+              className="w-full px-4 py-2 bg-[#1f2937] text-[#a3d706] placeholder:text-gray-400 border border-gray-600 rounded-lg outline-none focus:border-[#a3d706] focus:ring-1 focus:ring-[#a3d706] transition-all duration-200 text-center"
             />
           </div>
-          {/* كشف طبى */}
-          <div className="flex flex-col gap-1.5 w-full max-w-sm">
-            <label
-              htmlFor="كشف طبى"
-              className="text-sm font-medium text-gray-200"
-            >
-              كشف طبى
-            </label>
-            <input
-              id="كشف طبى"
-              type="text"
-              name="name"
-              className="w-full sm:flex-1 px-4 py-2 bg-[#1f2937] text-[#a3d706] placeholder:text-gray-400 border border-gray-600 rounded-lg outline-none focus:border-[#a3d706] focus:ring-1 focus:ring-[#a3d706] transition-all duration-200"
-            />
-          </div>
-          {/* مصاريف بطولة سباحة */}
-          <div className="flex flex-col gap-1.5 w-full max-w-sm">
-            <label
-              htmlFor="مصاريف بطولة سباحة"
-              className="text-sm font-medium text-gray-200"
-            >
-              مصاريف بطولة سباحة
-            </label>
-            <input
-              id="مصاريف بطولة سباحة"
-              type="text"
-              name="name"
-              className="w-full sm:flex-1 px-4 py-2 bg-[#1f2937] text-[#a3d706] placeholder:text-gray-400 border border-gray-600 rounded-lg outline-none focus:border-[#a3d706] focus:ring-1 focus:ring-[#a3d706] transition-all duration-200"
-            />
+          <hr className="w-full border-t border-gray-600 my-1" />
+          <div className="flex justify-center gap-3">
+            {/* الاجمالى */}
+            <div className="w-full max-w-sm flex items-center gap-3">
+              <label
+                htmlFor="الاجمالى"
+                className="text-sm font-medium text-gray-200 whitespace-nowrap"
+              >
+                الاجمالى
+              </label>
+              <input
+                id="الاجمالى"
+                type="number"
+                readOnly
+                name="الاجمالى"
+                className="w-full sm:flex-1 px-4 py-2 bg-[#1f2937] text-[#a3d706] placeholder:text-gray-400 border border-gray-600 rounded-lg outline-none focus:border-[#a3d706] focus:ring-1 focus:ring-[#a3d706] transition-all duration-200 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none text-center"
+              />
+            </div>
+            {/* المدفوع */}
+            <div className="w-full max-w-sm flex items-center gap-3">
+              <label
+                htmlFor="المدفوع"
+                className="text-sm font-medium text-gray-200 whitespace-nowrap"
+              >
+                المدفوع
+              </label>
+              <input
+                id="المدفوع"
+                type="number"
+                name="المدفوع"
+                className="w-full sm:flex-1 px-4 py-2 bg-[#1f2937] text-[#a3d706] placeholder:text-gray-400 border border-gray-600 rounded-lg outline-none focus:border-[#a3d706] focus:ring-1 focus:ring-[#a3d706] transition-all duration-200 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none text-center"
+              />
+            </div>
           </div>
         </div>
       </div>
