@@ -5,8 +5,7 @@ export default function Overview() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // جلب البيانات من سيرفر Express
-    fetch("http://localhost:3000/api/overview")
+    fetch("/api/overview")
       .then((res) => res.json())
       .then((userData) => {
         setData(userData);
