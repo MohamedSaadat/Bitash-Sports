@@ -5,8 +5,8 @@ export default function Dashboard() {
   return (
     <div className="w-full max-w-[99%] mx-auto gap-1 flex flex-col lg:flex-row">
       {/* Part 1 BTNs */}
-      <div className="w-full lg:w-100 p-2 bg-[rgba(20,20,20,0.6)] border-3 border-[#a3d706] rounded-2xl flex flex-col gap-2 items-center text-white">
-        <button className="w-full sm:w-auto px-6 py-2 border-2 border-[#a3d706] bg-[#27272a] text-[#a3d706] rounded-lg font-medium cursor-pointer hover:bg-[#a3d706] hover:border-[#a3d706] hover:text-[#27272a] transition-all duration-300 whitespace-nowrap">
+      <div className="w-full lg:w-100 p-2 bg-[rgba(20,20,20,0.6)] border-3 border-[#a3d706] rounded-2xl flex flex-col gap-2 items-center">
+        <button className="shiny w-full sm:w-auto px-6 py-2 border-2 border-[#a3d706] text-[#a3d706] rounded-lg font-medium cursor-pointer hover:bg-[#a3d706] hover:text-[#27272a] whitespace-nowrap">
           Add New Member
         </button>
       </div>
@@ -68,7 +68,7 @@ export default function Dashboard() {
               placeholder="Search by name, ID, phone number"
               className="w-full px-4 py-2 bg-[#1f2937] text-[#a3d706] placeholder:text-gray-400 border border-gray-600 rounded-lg outline-none focus:border-[#a3d706] focus:ring-1 focus:ring-[#a3d706] transition-all duration-200"
             />
-            <button className="px-6 py-2 border-2 border-[#a3d706] bg-[#27272a] text-[#a3d706] rounded-lg font-medium cursor-pointer hover:bg-[#a3d706] hover:border-[#a3d706] hover:text-[#27272a] transition-all duration-300 whitespace-nowrap shrink-0">
+            <button className="shiny px-6 py-2 border-2 border-[#a3d706] text-[#a3d706] rounded-lg font-medium cursor-pointer hover:bg-[#a3d706] hover:border-[#a3d706] hover:text-[#27272a] whitespace-nowrap shrink-0">
               Search
             </button>
           </div>

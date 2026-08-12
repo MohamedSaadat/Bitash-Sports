@@ -51,7 +51,7 @@ export default function Overview() {
                 {item.name}
               </span>
               <span className="px-2 py-0.5 text-xs font-mono font-bold rounded bg-[#a3d706]/15 text-[#a3d706] border border-[#a3d706]/30">
-                #{item.id}
+                {item.id}
               </span>
             </div>
 
@@ -103,7 +103,7 @@ export default function Overview() {
               >
                 <td className="py-3 px-4">
                   <span className="inline-block px-2.5 py-1 text-xs font-mono font-bold rounded-lg bg-[#a3d706]/15 text-[#a3d706] border border-[#a3d706]/30">
-                    #{item.id}
+                    {item.id}
                   </span>
                 </td>
                 <td className="py-3 px-4 font-medium text-white">
