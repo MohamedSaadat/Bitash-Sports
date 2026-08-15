@@ -12,34 +12,40 @@ export default function Overview() {
         setLoading(false);
       })
       .catch((err) => {
-        console.error("خطأ في جلب البيانات:", err);
+        console.error("Failed to update data:", err);
         setLoading(false);
       });
   }, []);
 
   if (loading) {
     return (
-      <p style={{ textAlign: "center", padding: "20px" }}>
-        جاري تحميل البيانات...
-      </p>
+      <p style={{ textAlign: "center", padding: "20px" }}>Loading data...</p>
     );
   }
-// console.log(data.DATA);
+
+  // User Count
+  let x = 0;
+  for (let i = 0; i < data.DATA.length; i++) {
+    if (data.DATA[i].الاسم === "0") {
+      x++;
+    }
+  }
+  let userCount = data.DATA.length - x;
 
   return (
     <div
       dir="rtl"
       className="w-[90%] p-4 bg-[rgba(20,20,20,0.6)] border-2 border-[#a3d706] rounded-2xl text-white backdrop-blur-sm shadow-xl"
     >
-      {/* الهيدر */}
+      {/* Header */}
       <div className="flex items-center justify-between pb-3 mb-4 border-b border-[#a3d706]/30">
         <h2 className="text-xl font-bold text-[#a3d706]">جدول البيانات</h2>
         <span className="px-3 py-1 text-xs font-semibold rounded-full bg-[#a3d706]/10 border border-[#a3d706] text-[#a3d706]">
-          العدد الإجمالي: {data.DATA.length}
+          العدد الإجمالي: {userCount}
         </span>
       </div>
 
-      {/* 1. تصميم الموبايل (بطاقات صغيرة بدلاً من جدول) */}
+      {/* 1. Mobile Screen */}
       <div className="flex flex-col gap-3 md:hidden">
         {data.DATA.map((item) => (
           <div
@@ -82,7 +88,7 @@ export default function Overview() {
         ))}
       </div>
 
-      {/* 2. تصميم الشاشات الكبيرة (الجدول التقليدي) */}
+      {/* 2. All Screens */}
       <div className="hidden md:block overflow-x-auto">
         <table className="w-full text-right border-collapse">
           <thead>

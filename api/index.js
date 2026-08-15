@@ -4,7 +4,7 @@ import path from "path";
 import cors from "cors";
 
 const app = express();
-app.use(cors());
+app.use(cors(), express.json());
 
 const filePath = path.join(process.cwd(), "src", "data.json");
 const userData = JSON.parse(fs.readFileSync(filePath, "utf-8"));

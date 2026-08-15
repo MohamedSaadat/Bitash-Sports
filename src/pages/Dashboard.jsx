@@ -6,8 +6,17 @@ export default function Dashboard() {
     <div className="w-full max-w-[99%] mx-auto gap-1 flex flex-col lg:flex-row">
       {/* Part 1 BTNs */}
       <div className="w-full lg:w-100 p-2 bg-[rgba(20,20,20,0.6)] border-3 border-[#a3d706] rounded-2xl flex flex-col gap-2 items-center">
-        <button className="shiny w-full sm:w-auto px-6 py-2 border-2 border-[#a3d706] text-[#a3d706] rounded-lg font-medium cursor-pointer hover:bg-[#a3d706] hover:text-[#27272a] whitespace-nowrap">
+        <button className="shiny w-full px-6 py-2 border-2 border-[#a3d706] text-[#a3d706] rounded-lg font-medium cursor-pointer hover:bg-[#a3d706] hover:text-[#27272a] whitespace-nowrap">
           Add New Member
+        </button>
+        <button className="shiny w-full px-6 py-2 border-2 border-[#a3d706] text-[#a3d706] rounded-lg font-medium cursor-pointer hover:bg-[#a3d706] hover:text-[#27272a] whitespace-nowrap">
+          Instapay M.Ahmed
+        </button>
+        <button className="shiny w-full px-6 py-2 border-2 border-[#a3d706] text-[#a3d706] rounded-lg font-medium cursor-pointer hover:bg-[#a3d706] hover:text-[#27272a] whitespace-nowrap">
+          Instapay M.Mohamed
+        </button>
+        <button className="shiny w-full px-6 py-2 border-2 border-[#a3d706] text-[#a3d706] rounded-lg font-medium cursor-pointer hover:bg-[#a3d706] hover:text-[#27272a] whitespace-nowrap">
+          Delete
         </button>
       </div>
 
