@@ -1,5 +1,8 @@
+// console.log("memberData:", memberData.DATA[1].payment.m8)
+// console.log("memberData:", Object.hasOwn(memberData.DATA[1].payment, "m1"))
 import React, { useState } from "react";
 import Clock from "../components/Clock";
+import { searchUser } from "../fun.js";
 
 export default function Dashboard() {
   return (
@@ -73,11 +76,15 @@ export default function Dashboard() {
           {/* Search input */}
           <div className="search w-full sm:max-w-170 flex items-center gap-2">
             <input
+              id="Search"
               type="text"
               placeholder="Search by name, ID, phone number"
               className="w-full px-4 py-2 bg-[#1f2937] text-[#a3d706] placeholder:text-gray-400 border border-gray-600 rounded-lg outline-none focus:border-[#a3d706] focus:ring-1 focus:ring-[#a3d706] transition-all duration-200"
             />
-            <button className="shiny px-6 py-2 border-2 border-[#a3d706] text-[#a3d706] rounded-lg font-medium cursor-pointer hover:bg-[#a3d706] hover:border-[#a3d706] hover:text-[#27272a] whitespace-nowrap shrink-0">
+            <button
+              onClick={searchUser}
+              className="shiny px-6 py-2 border-2 border-[#a3d706] text-[#a3d706] rounded-lg font-medium cursor-pointer hover:bg-[#a3d706] hover:border-[#a3d706] hover:text-[#27272a] whitespace-nowrap shrink-0"
+            >
               Search
             </button>
           </div>
@@ -86,21 +93,25 @@ export default function Dashboard() {
         {/* Member Profile Data div 3 */}
         <div className="flex flex-col sm:flex-row gap-3 w-full">
           <input
+            id="fullName"
             type="text"
             placeholder="Full Name"
             className="w-full sm:flex-2 px-4 py-2 bg-[#1f2937] text-[#a3d706] placeholder:text-gray-400 border border-gray-600 rounded-lg outline-none focus:border-[#a3d706] focus:ring-1 focus:ring-[#a3d706] transition-all duration-200"
           />
           <input
+            id="IDNumber"
             type="number"
             placeholder="ID Number"
             className="w-full sm:flex-1 px-4 py-2 bg-[#1f2937] text-[#a3d706] placeholder:text-gray-400 border border-gray-600 rounded-lg outline-none focus:border-[#a3d706] focus:ring-1 focus:ring-[#a3d706] transition-all duration-200 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
           />
           <input
+            id="BirthYear"
             type="number"
             placeholder="Birth Year"
             className="w-full sm:flex-1 px-4 py-2 bg-[#1f2937] text-[#a3d706] placeholder:text-gray-400 border border-gray-600 rounded-lg outline-none focus:border-[#a3d706] focus:ring-1 focus:ring-[#a3d706] transition-all duration-200 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
           />
           <input
+            id="PhoneNumber"
             type="number"
             // اعمله string فى js
             placeholder="Phone Number"
@@ -398,7 +409,7 @@ export default function Dashboard() {
               ملاحظات
             </label>
             <input
-              id="ملاحظات"
+              id="notes"
               type="text"
               name="ملاحظات"
               placeholder="ملاحظات"
