@@ -1,5 +1,6 @@
 @import "tailwindcss";
-input{
+input,
+select {
   text-align: center;
 }
 html,

@@ -2,7 +2,8 @@
 // console.log("memberData:", Object.hasOwn(memberData.DATA[1].payment, "m1"))
 import React, { useState } from "react";
 import Clock from "../components/Clock";
-import { searchUser } from "../fun.js";
+import { searchUserDashboard } from "../fun.js";
+import { Delete } from "../fun.js";
 
 export default function Dashboard() {
   return (
@@ -18,7 +19,7 @@ export default function Dashboard() {
         <button className="shiny w-full px-6 py-2 border-2 border-[#a3d706] text-[#a3d706] rounded-lg font-medium cursor-pointer hover:bg-[#a3d706] hover:text-[#27272a] whitespace-nowrap">
           Instapay M.Mohamed
         </button>
-        <button className="shiny w-full px-6 py-2 border-2 border-[#a3d706] text-[#a3d706] rounded-lg font-medium cursor-pointer hover:bg-[#a3d706] hover:text-[#27272a] whitespace-nowrap">
+        <button onClick={Delete} className="shiny w-full px-6 py-2 border-2 border-[#a3d706] text-[#a3d706] rounded-lg font-medium cursor-pointer hover:bg-[#a3d706] hover:text-[#27272a] whitespace-nowrap">
           Delete
         </button>
       </div>
@@ -56,6 +57,7 @@ export default function Dashboard() {
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 w-full">
           {/* Branch */}
           <select
+            id="Branch"
             defaultValue=""
             className="w-full lg:w-50 px-4 py-2 bg-[#1f2937] text-[#a3d706] border border-gray-600 rounded-lg outline-none focus:border-[#a3d706] focus:ring-1 focus:ring-[#a3d706] transition-all duration-200 cursor-pointer"
           >
@@ -68,7 +70,7 @@ export default function Dashboard() {
             <option className="text-white" value="الدخيلة">
               الدخيلة
             </option>
-            <option className="text-white" value="بيانكي">
+            <option className="text-white" value="بيانكى">
               بيانكي
             </option>
           </select>
@@ -82,7 +84,7 @@ export default function Dashboard() {
               className="w-full px-4 py-2 bg-[#1f2937] text-[#a3d706] placeholder:text-gray-400 border border-gray-600 rounded-lg outline-none focus:border-[#a3d706] focus:ring-1 focus:ring-[#a3d706] transition-all duration-200"
             />
             <button
-              onClick={searchUser}
+              onClick={searchUserDashboard}
               className="shiny px-6 py-2 border-2 border-[#a3d706] text-[#a3d706] rounded-lg font-medium cursor-pointer hover:bg-[#a3d706] hover:border-[#a3d706] hover:text-[#27272a] whitespace-nowrap shrink-0"
             >
               Search
@@ -454,10 +456,12 @@ export default function Dashboard() {
       </div>
 
       {/* Part 3 User Info */}
-      <div className="w-full lg:w-125 flex gap-1.5 p-2 bg-[rgba(20,20,20,0.6)] border-3 border-[#a3d706] rounded-2xl text-white">
+      <div id="info" className="w-full lg:w-125 flex gap-1.5 p-2 bg-[rgba(20,20,20,0.6)] border-3 border-[#a3d706] rounded-2xl text-white">
         <div className="الشهر">
           <table>
-            <thead>الشهر</thead>
+            <tr>
+              <th>الشهر</th>
+            </tr>
             <tbody>
               <tr>
                 <td>1</td>
@@ -498,49 +502,14 @@ export default function Dashboard() {
             </tbody>
           </table>
         </div>
-        <div className="سباحة">
-          <table>
-            <thead>سباحة</thead>
-            <tbody>
-              <tr>
-                <td>1000</td>
-              </tr>
-              <tr>
-                <td>1000</td>
-              </tr>
-              <tr>
-                <td>1000</td>
-              </tr>
-              <tr>
-                <td>1000</td>
-              </tr>
-              <tr>
-                <td>1000</td>
-              </tr>
-              <tr>
-                <td>1000</td>
-              </tr>
-              <tr>
-                <td>1000</td>
-              </tr>
-              <tr>
-                <td>1000</td>
-              </tr>
-              <tr>
-                <td>1000</td>
-              </tr>
-              <tr>
-                <td>1000</td>
-              </tr>
-              <tr>
-                <td>1000</td>
-              </tr>
-              <tr>
-                <td>1000</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+        <div id="سباحةtable"></div>
+        <div id="جمبازtable"></div>
+        <div id="كاراتيهtable"></div>
+        <div id="كونج_فوtable"></div>
+        <div id="تايكوندوtable"></div>
+        <div id="كورةtable"></div>
+        <div id="كيك_بوكسtable"></div>
+        <div id="فتنس_جمبازtable"></div>
       </div>
     </div>
   );
