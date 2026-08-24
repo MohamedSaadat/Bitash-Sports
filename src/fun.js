@@ -1,5 +1,16 @@
 import membersData from "./data.json";
 
+export const DashboardHandleKeyDown = (e) => {
+  if (e.key === "Enter") {
+    searchUserDashboard();
+  }
+};
+export const OverviewHandleKeyDown = (e) => {
+  if (e.key === "Enter") {
+    searchUserOverview();
+  }
+};
+
 // 1- Search User Dashboard
 export function searchUserDashboard() {
   const searchValue = document.getElementById("Search").value;
@@ -254,6 +265,8 @@ export function searchUserDashboard() {
   }
 }
 
+// -----------------------------------------------------------
+
 // 2- Delete
 export function Delete() {
   document.querySelectorAll("input").forEach((input) => {
@@ -317,4 +330,92 @@ export function Delete() {
         <div id="كيك_بوكسtable"></div>
         <div id="فتنس_جمبازtable"></div>
   `;
+}
+
+// -----------------------------------------------------------
+
+// 3- Saerch User Overview
+export function searchUserOverview() {
+  const searchValue = document.getElementById("overviewSearch").value;
+  let index;
+  // اولا بتاكد انه مش فاضى
+  if (searchValue == "") {
+    alert("برجاء ادخال رقم العضوية او رقم التليفون او اسم المشترك");
+    return;
+  }
+  // ثانيا بعمل بحث
+  for (let i = 0; i < membersData.DATA.length; i++) {
+    if (
+      searchValue === membersData.DATA[i].كود ||
+      searchValue === membersData.DATA[i].الاسم ||
+      searchValue === membersData.DATA[i].تليفون
+    ) {
+      index = i;
+      break;
+    }
+  }
+  // ثالثا بعرض البيانات
+  if (index || index == 0) {
+    document.getElementById("overviewTable").innerHTML = `
+     <table class="w-full text-right border-collapse">
+          <thead class="sticky top-0 z-10 bg-[#0a0a0a]">
+            <tr class="text-[#a3d706] text-sm border-b border-[#a3d706]/40">
+              <th class="py-3 px-4 font-bold">الكود</th>
+              <th class="py-3 px-4 font-bold">الاسم</th>
+              <th class="py-3 px-4 font-bold">الفرع</th>
+              <th class="py-3 px-4 font-bold">المواليد</th>
+              <th class="py-3 px-4 font-bold">الفريق</th>
+              <th class="py-3 px-4 font-bold">التليفون</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-neutral-800 text-sm">
+              <tr
+                class="hover:bg-[#a3d706]/10 transition-colors duration-150"
+              >
+                <td class="py-3 px-4">
+                  <span class="inline-block px-2.5 py-1 text-xs font-mono font-bold rounded-lg bg-[#a3d706]/15 text-[#a3d706] border border-[#a3d706]/30">
+                    ${membersData.DATA[index].كود}
+                  </span>
+                </td>
+                <td class="py-3 px-4 font-medium text-white">
+                  ${membersData.DATA[index].الاسم}
+                </td>
+                <td class="py-3 px-4 text-neutral-300">${membersData.DATA[index].فرع}</td>
+                <td class="py-3 px-4 text-neutral-300">${membersData.DATA[index].مواليد}</td>
+                <td class="py-3 px-4">
+                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-[#a3d706]/20 text-[#a3d706] border border-[#a3d706]/40">
+                      ${membersData.DATA[index].فريق}
+                    </span>
+                <td class="py-3 px-4 font-mono text-neutral-300">
+                  ${membersData.DATA[index].تليفون}
+                </td>
+              </tr>
+          </tbody>
+        </table>
+    `;
+  } else {
+    alert("ممكن تكون كاتب حاجة غلط او المشترك مش موجود اصلا");
+  }
+  console.log(searchValue, index);
+}
+
+// -----------------------------------------------------------
+
+// 4- Add New Member
+export function AddNewMember() {
+  console.log("Add New Member");
+}
+
+// -----------------------------------------------------------
+
+// 5- Instapay M.Ahmed
+export function instapayAhmed() {
+  console.log("Instapay M.Ahmed");
+}
+
+// -----------------------------------------------------------
+
+// 6- Instapay M.Mohamed
+export function instapayMohamed() {
+  console.log("Instapay M.Mohamed");
 }

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { OverviewHandleKeyDown, searchUserOverview } from "../fun";
 
 export default function Overview() {
   const [data, setData] = useState([]);
@@ -42,18 +43,19 @@ export default function Overview() {
         <h2 className="text-xl font-bold text-[#a3d706]">جدول البيانات</h2>
         {/* Search input & BTN */}
         <div className="search w-full sm:max-w-170 flex items-center gap-2">
-          <input
-            id="Search"
-            type="text"
-            placeholder="Search"
-            className="w-full px-4 py-2 bg-[#1f2937] text-[#a3d706] placeholder:text-gray-400 border border-gray-600 rounded-lg outline-none focus:border-[#a3d706] focus:ring-1 focus:ring-[#a3d706] transition-all duration-200"
-          />
           <button
-            // onClick={searchUserDashboard}
+            onClick={searchUserOverview}
             className="shiny px-6 py-2 border-2 border-[#a3d706] text-[#a3d706] rounded-lg font-medium cursor-pointer hover:bg-[#a3d706] hover:border-[#a3d706] hover:text-[#27272a] whitespace-nowrap shrink-0"
           >
             Search
           </button>
+          <input
+            id="overviewSearch"
+            type="text"
+            placeholder="Search"
+            onKeyDown={OverviewHandleKeyDown}
+            className="w-full px-4 py-2 bg-[#1f2937] text-[#a3d706] placeholder:text-gray-400 border border-gray-600 rounded-lg outline-none focus:border-[#a3d706] focus:ring-1 focus:ring-[#a3d706] transition-all duration-200"
+          />
         </div>
         <span className="px-3 py-1 text-xs font-semibold rounded-full bg-[#a3d706]/10 border border-[#a3d706] text-[#a3d706]">
           العدد الإجمالي: {userCount}
@@ -104,7 +106,10 @@ export default function Overview() {
       </div>
 
       {/* 2. All Screens */}
-      <div className="max-h-125 overflow-y-auto overflow-x-auto rounded-xl [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:bg-[#141414] [&::-webkit-scrollbar-thumb]:bg-[#a3d706]/30 [&::-webkit-scrollbar-thumb]:rounded-full hover:[&::-webkit-scrollbar-thumb]:bg-[#a3d706]">
+      <div
+        id="overviewTable"
+        className="max-h-125 overflow-y-auto overflow-x-auto rounded-xl [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:bg-[#141414] [&::-webkit-scrollbar-thumb]:bg-[#a3d706]/30 [&::-webkit-scrollbar-thumb]:rounded-full hover:[&::-webkit-scrollbar-thumb]:bg-[#a3d706]"
+      >
         <table className="w-full text-right border-collapse">
           <thead className="sticky top-0 z-10 bg-[#0a0a0a]">
             <tr className="text-[#a3d706] text-sm border-b border-[#a3d706]/40">
