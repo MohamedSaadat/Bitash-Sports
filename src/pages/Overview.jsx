@@ -31,7 +31,7 @@ export default function Overview() {
       x++;
     }
   }
-  // let userCount = data.DATA.length - x;
+  let userCount = data.DATA.length - x;
 
   return (
     <div
@@ -66,35 +66,35 @@ export default function Overview() {
       <div className="flex flex-col gap-3 md:hidden">
         {data.DATA.map((item) => (
           <div
-            key={item.كود}
+            key={item.id}
             className="p-3.5 bg-[rgba(10,10,10,0.8)] border border-[#a3d706]/30 rounded-xl flex flex-col gap-2"
           >
             <div className="flex justify-between items-center pb-2 border-b border-neutral-800">
               <span className="font-bold text-[#a3d706] text-base">
-                {item.الاسم}
+                {item.name}
               </span>
               <span className="px-2 py-0.5 text-xs font-mono font-bold rounded bg-[#a3d706]/15 text-[#a3d706] border border-[#a3d706]/30">
-                {item.كود}
+                {item.id}
               </span>
             </div>
 
             <div className="grid grid-cols-2 gap-2 text-xs text-neutral-300">
               <div>
-                <span className="text-neutral-500">الفرع:</span> {item.فرع}
+                <span className="text-neutral-500">الفرع:</span> {item.branch}
               </div>
               <div>
                 <span className="text-neutral-500">المواليد:</span>{" "}
-                {item.مواليد}
+                {item.YearOfBirth}
               </div>
               <div>
                 <span className="text-neutral-500">التليفون:</span>{" "}
-                <span className="font-mono">{item.تليفون}</span>
+                <span className="font-mono">{item.phone}</span>
               </div>
               <div>
                 <span className="text-neutral-500">الفريق: </span>
-                {item.فريق ? (
+                {item.team ? (
                   <span className="inline-block px-2 py-0.5 text-[10px] rounded-full bg-[#a3d706]/20 text-[#a3d706]">
-                    {item.فريق}
+                    {item.team}
                   </span>
                 ) : (
                   "-"
@@ -124,30 +124,30 @@ export default function Overview() {
           <tbody className="divide-y divide-neutral-800 text-sm">
             {data.DATA.map((item) => (
               <tr
-                key={item.كود}
+                key={item.id}
                 className="hover:bg-[#a3d706]/10 transition-colors duration-150"
               >
                 <td className="py-3 px-4">
                   <span className="inline-block px-2.5 py-1 text-xs font-mono font-bold rounded-lg bg-[#a3d706]/15 text-[#a3d706] border border-[#a3d706]/30">
-                    {item.كود}
+                    {item.id}
                   </span>
                 </td>
                 <td className="py-3 px-4 font-medium text-white">
-                  {item.الاسم}
+                  {item.name}
                 </td>
-                <td className="py-3 px-4 text-neutral-300">{item.فرع}</td>
-                <td className="py-3 px-4 text-neutral-300">{item.مواليد}</td>
+                <td className="py-3 px-4 text-neutral-300">{item.branch}</td>
+                <td className="py-3 px-4 text-neutral-300">{item.YearOfBirth}</td>
                 <td className="py-3 px-4">
-                  {item.فريق ? (
+                  {item.team ? (
                     <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-[#a3d706]/20 text-[#a3d706] border border-[#a3d706]/40">
-                      {item.فريق}
+                      {item.team}
                     </span>
                   ) : (
                     <span className="text-neutral-500 text-xs">-</span>
                   )}
                 </td>
                 <td className="py-3 px-4 font-mono text-neutral-300">
-                  {item.تليفون}
+                  {item.phone}
                 </td>
               </tr>
             ))}

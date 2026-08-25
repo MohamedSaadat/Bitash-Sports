@@ -8,9 +8,7 @@ app.use(cors(), express.json());
 
 // const filePath = path.join(process.cwd(), "src", "data.json");
 // const userData = JSON.parse(fs.readFileSync(filePath, "utf-8"));
-
 app.get("/api/overview", (req, res) => {
-  // res.json(userData);
   const connection = mysql.createConnection({
     host: "localhost",
     user: "root",
@@ -18,7 +16,7 @@ app.get("/api/overview", (req, res) => {
   });
   connection.execute("SELECT * FROM `users`", (err, result) => {
     console.log("🚀 ~ result:", result);
-    // res.json(result)
+    res.json({ DATA: result });
   });
 });
 
