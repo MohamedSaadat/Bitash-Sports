@@ -31,7 +31,7 @@ export default function Overview() {
       x++;
     }
   }
-  let userCount = data.DATA.length - x;
+  // let userCount = data.DATA.length - x;
 
   return (
     <div
