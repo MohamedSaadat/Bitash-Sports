@@ -63,7 +63,7 @@ export default function Overview() {
       </div>
 
       {/* 1. Mobile Screen */}
-      <div className="flex flex-col gap-3 md:hidden">
+      <div className="flex flex-col gap-3 md:hidden max-h-125 overflow-y-auto pr-1 [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:bg-[#141414] [&::-webkit-scrollbar-thumb]:bg-[#a3d706]/30 [&::-webkit-scrollbar-thumb]:rounded-full hover:[&::-webkit-scrollbar-thumb]:bg-[#a3d706]">
         {data.DATA.map((item) => (
           <div
             key={item.id}
@@ -100,16 +100,17 @@ export default function Overview() {
                   "-"
                 )}
               </div>
+              <div className="col-span-2">
+                <span className="text-neutral-500">ملاحظات:</span>{" "}
+                <span className="font-mono">{item.notes}</span>
+              </div>
             </div>
           </div>
         ))}
       </div>
 
       {/* 2. All Screens */}
-      <div
-        id="overviewTable"
-        className="max-h-125 overflow-y-auto overflow-x-auto rounded-xl [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:bg-[#141414] [&::-webkit-scrollbar-thumb]:bg-[#a3d706]/30 [&::-webkit-scrollbar-thumb]:rounded-full hover:[&::-webkit-scrollbar-thumb]:bg-[#a3d706]"
-      >
+      <div className="hidden md:block max-h-125 overflow-y-auto overflow-x-auto rounded-xl [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:bg-[#141414] [&::-webkit-scrollbar-thumb]:bg-[#a3d706]/30 [&::-webkit-scrollbar-thumb]:rounded-full hover:[&::-webkit-scrollbar-thumb]:bg-[#a3d706]">
         <table className="w-full text-right border-collapse">
           <thead className="sticky top-0 z-10 bg-[#0a0a0a]">
             <tr className="text-[#a3d706] text-sm border-b border-[#a3d706]/40">
@@ -119,6 +120,7 @@ export default function Overview() {
               <th className="py-3 px-4 font-bold">المواليد</th>
               <th className="py-3 px-4 font-bold">الفريق</th>
               <th className="py-3 px-4 font-bold">التليفون</th>
+              <th className="py-3 px-4 font-bold">ملاحظات</th>
             </tr>
           </thead>
           <tbody className="divide-y divide-neutral-800 text-sm">
@@ -150,6 +152,9 @@ export default function Overview() {
                 </td>
                 <td className="py-3 px-4 font-mono text-neutral-300">
                   {item.phone}
+                </td>
+                <td className="w-50 py-3 px-4 font-mono text-neutral-300">
+                  {item.notes}
                 </td>
               </tr>
             ))}
