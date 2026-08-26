@@ -1,5 +1,5 @@
 import Clock from "../components/Clock";
-import { AddNewMember, DashboardHandleKeyDown, Delete, instapayAhmed, instapayMohamed, searchUserDashboard } from "../fun.js";
+import { AddNewMember, DashboardHandleKeyDown, Delete, instapayAhmed, instapayMohamed, searchUserDashboard } from "../fun";
 
 export default function Dashboard() {
   return (

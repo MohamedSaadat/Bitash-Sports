@@ -27,7 +27,7 @@ export default function Overview() {
   // User Count
   let x = 0;
   for (let i = 0; i < data.DATA.length; i++) {
-    if (data.DATA[i].الاسم === "0") {
+    if (data.DATA[i].name === "0") {
       x++;
     }
   }
@@ -136,7 +136,9 @@ export default function Overview() {
                   {item.name}
                 </td>
                 <td className="py-3 px-4 text-neutral-300">{item.branch}</td>
-                <td className="py-3 px-4 text-neutral-300">{item.YearOfBirth}</td>
+                <td className="py-3 px-4 text-neutral-300">
+                  {item.YearOfBirth}
+                </td>
                 <td className="py-3 px-4">
                   {item.team ? (
                     <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-[#a3d706]/20 text-[#a3d706] border border-[#a3d706]/40">
