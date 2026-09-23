@@ -74,7 +74,7 @@ export default function Dashboard() {
           {/* Search input */}
           <div className="search w-full sm:max-w-170 flex items-center gap-2">
             <input
-              id="Search"
+              id="SearchDashboard"
               onKeyDown={DashboardHandleKeyDown}
               type="text"
               placeholder="Search by name, ID, phone number"

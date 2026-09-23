@@ -5,8 +5,6 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "server": "node --watch api/index.js",
-    "start": "concurrently \"npm run dev\" \"npm run server\"",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
@@ -14,9 +12,6 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^7.3.1",
     "@tailwindcss/vite": "^4.3.3",
-    "cors": "^2.8.6",
-    "express": "^5.2.1",
-    "mysql2": "^3.24.2",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
     "react-router-dom": "^7.11.0",

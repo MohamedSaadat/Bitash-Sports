@@ -10,8 +10,41 @@ export const OverviewHandleKeyDown = (e) => {
 };
 
 // 1- Search User Dashboard
-export function searchUserDashboard() {
+export async function searchUserDashboard() {
   console.log("searchUserDashboard");
+  const searchValue = document.getElementById("SearchDashboard").value.trim();
+
+  if (!searchValue) {
+    alert("برجاء إدخال رقم العضوية أو الاسم أو رقم التليفون");
+    return;
+  }
+
+  try {
+    const res = await fetch("http://localhost:3000/api/overview");
+    const dataFromSql = await res.json();
+
+    const member = dataFromSql.DATA.find(
+      (item) =>
+        String(item.id) === searchValue ||
+        item.name === searchValue ||
+        String(item.phone) === searchValue,
+    );
+
+    if (member) {
+      document.getElementById("fullName").value = member.name || "";
+      document.getElementById("IDNumber").value = member.id || "";
+      document.getElementById("Branch").value = member.branch || "";
+      document.getElementById("BirthYear").value =
+        member.YearOfBirth || member.Year || "";
+      document.getElementById("PhoneNumber").value = member.phone || "";
+      document.getElementById("notes").value = member.notes || "";
+    } else {
+      alert("المشترك غير موجود في قاعدة البيانات");
+    }
+  } catch (err) {
+    console.error("Error fetching database:", err);
+    alert("حدث خطأ في الاتصال بقاعدة البيانات");
+  }
 }
 
 // -----------------------------------------------------------
