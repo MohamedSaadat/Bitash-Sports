@@ -3,9 +3,16 @@ export const DashboardHandleKeyDown = (e) => {
     searchUserDashboard();
   }
 };
+
 export const OverviewHandleKeyDown = (e) => {
   if (e.key === "Enter") {
     searchUserOverview();
+  }
+};
+
+export const expensesHandleKeyDown = (e) => {
+  if (e.key === "Enter") {
+    searchUserExpenses();
   }
 };
 
@@ -140,4 +147,11 @@ export function instapayAhmed() {
 // 6- Instapay M.Mohamed
 export function instapayMohamed() {
   console.log("Instapay M.Mohamed");
+}
+
+// -----------------------------------------------------------
+
+// 7- Search User Expenses
+export function searchUserExpenses() {
+  console.log("searchUserExpenses");
 }

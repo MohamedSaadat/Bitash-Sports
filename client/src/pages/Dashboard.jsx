@@ -454,59 +454,7 @@ export default function Dashboard() {
 
       {/* Part 3 User Info */}
       <div id="info" className="w-full lg:w-125 flex gap-1.5 p-2 bg-[rgba(20,20,20,0.6)] border-3 border-[#a3d706] rounded-2xl text-white">
-        <div className="الشهر">
-          <table>
-            <tr>
-              <th>الشهر</th>
-            </tr>
-            <tbody>
-              <tr>
-                <td>1</td>
-              </tr>
-              <tr>
-                <td>2</td>
-              </tr>
-              <tr>
-                <td>3</td>
-              </tr>
-              <tr>
-                <td>4</td>
-              </tr>
-              <tr>
-                <td>5</td>
-              </tr>
-              <tr>
-                <td>6</td>
-              </tr>
-              <tr>
-                <td>7</td>
-              </tr>
-              <tr>
-                <td>8</td>
-              </tr>
-              <tr>
-                <td>9</td>
-              </tr>
-              <tr>
-                <td>10</td>
-              </tr>
-              <tr>
-                <td>11</td>
-              </tr>
-              <tr>
-                <td>12</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div id="سباحةtable"></div>
-        <div id="جمبازtable"></div>
-        <div id="كاراتيهtable"></div>
-        <div id="كونج_فوtable"></div>
-        <div id="تايكوندوtable"></div>
-        <div id="كورةtable"></div>
-        <div id="كيك_بوكسtable"></div>
-        <div id="فتنس_جمبازtable"></div>
+        <p className="w-full text-center">ملاحظات</p>
       </div>
     </div>
   );
