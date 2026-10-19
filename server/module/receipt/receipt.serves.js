@@ -5,24 +5,22 @@ export const createReceipt = async (data) => {
     serialNumber,
     date,
     branch,
-    name,
-    userId,
+    user,
     notes,
-    amountPaid,
-    paymentMethodType,
     sports,
+    paymentMethodType,
+    forMonth,
   } = data;
 
   let addReceipt = await receiptModel.create({
     serialNumber,
     date,
     branch,
-    name,
-    userId,
+    user,
     notes,
-    amountPaid,
-    paymentMethodType,
     sports,
+    paymentMethodType,
+    forMonth,
   });
 
   if (addReceipt) {
