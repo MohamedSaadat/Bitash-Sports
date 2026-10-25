@@ -1,5 +1,5 @@
 import React from "react";
-import { expensesHandleKeyDown, searchUserExpenses } from "../fun";
+import { expensesHandleKeyDown, searchExpenses } from "../fun";
 
 export default function Expenses() {
   return (
@@ -13,7 +13,7 @@ export default function Expenses() {
         {/* Search input & BTN */}
         <div className="search w-full sm:max-w-170 flex items-center gap-2">
           <button
-            onClick={searchUserExpenses}
+            onClick={searchExpenses}
             className="shiny px-6 py-2 border-2 border-[#a3d706] text-[#a3d706] rounded-lg font-medium cursor-pointer hover:bg-[#a3d706] hover:border-[#a3d706] hover:text-[#27272a] whitespace-nowrap shrink-0"
           >
             Search

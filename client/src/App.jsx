@@ -6,6 +6,7 @@ import Expenses from "./pages/Expenses";
 import NotFound from "./pages/NotFound";
 import Overview from "./pages/Overview";
 import Reports from "./pages/Reports";
+import PrintableReceipt from "./pages/PrintableReceipt.jsx";
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,7 @@ const router = createBrowserRouter([
       { path: "Overview", element: <Overview /> },
       { path: "Cashier", element: <Cashier /> },
       { path: "Expenses", element: <Expenses /> },
+      { path: "PrintableReceipt", element: <PrintableReceipt /> },
       { path: "Reports", element: <Reports /> },
       { path: "*", element: <NotFound /> },
     ],

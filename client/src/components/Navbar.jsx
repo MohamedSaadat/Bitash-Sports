@@ -7,6 +7,7 @@ const listItems = [
   { name: "Overview", path: "/overview" },
   { name: "Cashier", path: "/cashier" },
   { name: "Expenses", path: "/expenses" },
+  { name: "Print", path: "/PrintableReceipt" },
   { name: "Reports", path: "/reports" },
 ];
 

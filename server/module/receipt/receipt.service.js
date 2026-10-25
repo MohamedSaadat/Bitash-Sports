@@ -1,16 +1,19 @@
 import { receiptModel } from "../../src/database/model/receipt.model.js";
+import { counterModel } from "./counterModel.js";
 
 export const createReceipt = async (data) => {
-  let {
-    serialNumber,
-    date,
-    branch,
-    user,
-    notes,
-    sports,
-    paymentMethodType,
-    forMonth,
-  } = data;
+  let { date, branch, user, notes, sports, paymentMethodType, forMonth } = data;
+
+  const counter = await counterModel.findOneAndUpdate(
+    { _id: "receipt" },
+    { $inc: { seq: 1 } },
+    {
+      new: true,
+      upsert: true,
+    },
+  );
+
+  const serialNumber = counter.seq;
 
   let addReceipt = await receiptModel.create({
     serialNumber,
@@ -24,7 +27,7 @@ export const createReceipt = async (data) => {
   });
 
   if (addReceipt) {
-    return { message: "receipt added" };
+    return { message: "receipt added", receipt: addReceipt };
   } else {
     return { message: "receipt not added" };
   }
@@ -39,14 +42,14 @@ export const getAllReceipts = async () => {
   }
 };
 
-export const getReceiptById = async (userId) => {
-  let receipt = await receiptModel.find({ userId });
-  if (receipt.length > 0) {
-    return { message: "done", receipt };
-  } else {
-    return { message: "receipt not found" };
-  }
-};
+// export const getReceiptById = async (userId) => {
+//   let receipt = await receiptModel.find({ userId });
+//   if (receipt.length > 0) {
+//     return { message: "done", receipt };
+//   } else {
+//     return { message: "receipt not found" };
+//   }
+// };
 
 // export const updateUser = async (body, query) => {
 //   let { name, userId, yearOfBirth, phone, notes, sports } = body;

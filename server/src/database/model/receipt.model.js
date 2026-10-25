@@ -19,7 +19,7 @@ const user = new Schema({
   },
 });
 
-const sportSchema = new Schema({
+const sports = new Schema({
   swimming: {
     amountPaid: {
       type: Number,
@@ -162,7 +162,6 @@ const sportSchema = new Schema({
       default: 0,
     },
   },
-  // for all
   medical: {
     amountPaid: {
       type: Number,
@@ -183,13 +182,16 @@ const paymentMethodSchema = new Schema({
     type: Date,
     default: Date.now,
   },
-  branch: String,
+  branch: {
+    type: String,
+    required: true,
+  },
   user: user,
   notes: {
     type: String,
     default: "",
   },
-  sports: sportSchema,
+  sports: sports,
   forMonth: Number,
   paymentMethodType: {
     type: String,

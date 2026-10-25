@@ -42,3 +42,30 @@ body {
 .shiny:hover::before {
   left: 0;
 }
+
+/* ---------------------------------- */
+
+@media print {
+  body * {
+    visibility: hidden !important;
+    color: black !important;
+  }
+
+  #printable-receipt,
+  #printable-receipt * {
+    visibility: visible !important;
+  }
+
+  #printable-receipt {
+    position: absolute !important;
+    top: 16px !important;
+  }
+
+  body {
+    background: white !important;
+  }
+
+  @page {
+    margin: 0;
+  }
+}

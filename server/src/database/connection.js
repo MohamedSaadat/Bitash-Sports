@@ -8,6 +8,7 @@ export const databaseConnection = () => {
       console.log("ok");
     })
     .catch((err) => {
+      console.log("not ok");
       console.log(err);
     });
 };

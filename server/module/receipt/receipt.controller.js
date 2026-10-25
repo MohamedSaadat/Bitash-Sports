@@ -1,9 +1,5 @@
 import { Router } from "express";
-import {
-  createReceipt,
-  getAllReceipts,
-  getReceiptById,
-} from "./receipt.serves.js";
+import { createReceipt, getAllReceipts } from "./receipt.service.js";
 
 const receiptRouter = Router();
 
@@ -17,10 +13,10 @@ receiptRouter.get("/getAllReceipts", async (req, res) => {
   res.json(data);
 });
 
-receiptRouter.get("/getReceiptById/:userId", async (req, res) => {
-  let data = await getReceiptById(req.params.userId);
-  res.json(data);
-});
+// receiptRouter.get("/getReceiptById/:userId", async (req, res) => {
+//   let data = await getReceiptById(req.params.userId);
+//   res.json(data);
+// });
 
 // receiptRouter.put("/update-user", async (req, res) => {
 //   let data = await updateUser(req.body, req.query);
