@@ -1,68 +1,68 @@
 import { useState, useEffect } from "react";
 
 export default function PrintableReceipt({ refreshTrigger }) {
-  const [receipt, setReceipt] = useState(null);
-  const [loading, setLoading] = useState(false);
-  const [fetchError, setFetchError] = useState(false);
+  // const [receipt, setReceipt] = useState(null);
+  // const [loading, setLoading] = useState(false);
+  // const [fetchError, setFetchError] = useState(false);
 
-  useEffect(() => {
-    if (refreshTrigger === 0) return;
+  // useEffect(() => {
+  //   if (refreshTrigger === 0) return;
 
-    setLoading(true);
-    setFetchError(false);
+  //   setLoading(true);
+  //   setFetchError(false);
 
-    fetch("http://localhost:3000/receipts/getAllReceipts")
-      .then((res) => {
-        if (!res.ok) {
-          throw new Error("Failed to fetch receipts");
-        }
+  //   fetch("http://localhost:3000/receipts/getAllReceipts")
+  //     .then((res) => {
+  //       if (!res.ok) {
+  //         throw new Error("Failed to fetch receipts");
+  //       }
 
-        return res.json();
-      })
-      .then((data) => {
-        const receiptsData = Array.isArray(data)
-          ? data
-          : Array.isArray(data.receipts)
-            ? data.receipts
-            : [];
+  //       return res.json();
+  //     })
+  //     .then((data) => {
+  //       const receiptsData = Array.isArray(data)
+  //         ? data
+  //         : Array.isArray(data.receipts)
+  //           ? data.receipts
+  //           : [];
 
-        if (receiptsData.length === 0) {
-          setReceipt(null);
-          return;
-        }
+  //       if (receiptsData.length === 0) {
+  //         setReceipt(null);
+  //         return;
+  //       }
 
-        const latestReceipt = receiptsData.reduce((latest, current) =>
-          Number(current.serialNumber) > Number(latest.serialNumber)
-            ? current
-            : latest,
-        );
+  //       const latestReceipt = receiptsData.reduce((latest, current) =>
+  //         Number(current.serialNumber) > Number(latest.serialNumber)
+  //           ? current
+  //           : latest,
+  //       );
 
-        setReceipt(latestReceipt);
-      })
-      .catch((err) => {
-        console.error("Failed to fetch receipt:", err);
-        setFetchError(true);
-      })
-      .finally(() => {
-        setLoading(false);
-      });
-  }, [refreshTrigger]);
+  //       setReceipt(latestReceipt);
+  //     })
+  //     .catch((err) => {
+  //       console.error("Failed to fetch receipt:", err);
+  //       setFetchError(true);
+  //     })
+  //     .finally(() => {
+  //       setLoading(false);
+  //     });
+  // }, [refreshTrigger]);
 
-  useEffect(() => {
-    if (!receipt || refreshTrigger === 0) return;
+  // useEffect(() => {
+  //   if (!receipt || refreshTrigger === 0) return;
 
-    const timer = setTimeout(() => {
-      window.print();
-    }, 300);
+  //   const timer = setTimeout(() => {
+  //     window.print();
+  //   }, 300);
 
-    return () => clearTimeout(timer);
-  }, [receipt, refreshTrigger]);
+  //   return () => clearTimeout(timer);
+  // }, [receipt, refreshTrigger]);
 
-  if (loading) return <p>جاري تحميل الإيصال...</p>;
+  // if (loading) return <p>جاري تحميل الإيصال...</p>;
 
-  if (fetchError) return <p>حصل خطأ أثناء تحميل الإيصال.</p>;
+  // if (fetchError) return <p>حصل خطأ أثناء تحميل الإيصال.</p>;
 
-  if (!receipt) return null;
+  // if (!receipt) return null;
 
   return (
     // <div
