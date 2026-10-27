@@ -5,7 +5,7 @@ import receiptRouter from "../module/receipt/receipt.controller.js";
 import cors from "cors";
 
 const app = express();
-databaseConnection();
+await databaseConnection();
 app.use(cors());
 app.use(json());
 app.use("/receipts", receiptRouter);
