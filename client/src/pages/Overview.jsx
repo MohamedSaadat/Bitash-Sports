@@ -7,7 +7,7 @@ export default function Overview() {
   const [fetchError, setFetchError] = useState(false);
 
   useEffect(() => {
-    fetch("http://localhost:3000/receipts/getAllReceipts")
+    fetch("http://localhost:3001/receipts/getAllReceipts")
       .then((res) => {
         if (!res.ok) {
           throw new Error("Failed to fetch receipts");

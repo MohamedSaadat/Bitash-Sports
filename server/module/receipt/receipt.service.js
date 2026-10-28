@@ -8,7 +8,7 @@ export const createReceipt = async (data) => {
     { _id: "receipt" },
     { $inc: { seq: 1 } },
     {
-      new: true,
+      returnDocument: "after",
       upsert: true,
     },
   );

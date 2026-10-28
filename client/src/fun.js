@@ -184,7 +184,7 @@ export async function Pay(
 
   try {
     const response = await fetch(
-      "http://localhost:3000/receipts/createReceipt",
+      "http://localhost:3001/receipts/createReceipt",
       {
         method: "POST",
         headers: {

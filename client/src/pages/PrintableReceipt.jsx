@@ -11,7 +11,7 @@ export default function PrintableReceipt({ refreshTrigger }) {
     setLoading(true);
     setFetchError(false);
 
-    fetch("http://localhost:3000/receipts/getAllReceipts")
+    fetch("http://localhost:3001/receipts/getAllReceipts")
       .then((res) => {
         if (!res.ok) {
           throw new Error("Failed to fetch receipts");
