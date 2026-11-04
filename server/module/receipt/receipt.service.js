@@ -1,5 +1,5 @@
 import { receiptModel } from "../../src/database/model/receipt.model.js";
-import { counterModel } from "./counterModel.js";
+import { counterModel } from "../../src/database/model/counterModel.js";
 
 export const createReceipt = async (data) => {
   let { date, branch, user, notes, sports, paymentMethodType, forMonth } = data;

@@ -2,6 +2,7 @@ import express, { json } from "express";
 import { env } from "./config/env.service.js";
 import { databaseConnection } from "./database/connection.js";
 import receiptRouter from "../module/receipt/receipt.controller.js";
+import userRouter from "../module/all Users/allUsers.controller.js";
 import cors from "cors";
 
 const app = express();
@@ -9,6 +10,7 @@ await databaseConnection();
 app.use(cors());
 app.use(json());
 app.use("/receipts", receiptRouter);
+app.use("/users", userRouter);
 
 app.get("/", (req, res) => {
   res.json("Hello World!");

@@ -5,9 +5,10 @@ import logo from "../assets/logo.png";
 const listItems = [
   { name: "Dashboard", path: "/" },
   { name: "Overview", path: "/overview" },
+  { name: "All Users", path: "/allUsers" },
+  { name: "Print", path: "/PrintableReceipt" },
   { name: "Cashier", path: "/cashier" },
   { name: "Expenses", path: "/expenses" },
-  { name: "Print", path: "/PrintableReceipt" },
   { name: "Reports", path: "/reports" },
 ];
 

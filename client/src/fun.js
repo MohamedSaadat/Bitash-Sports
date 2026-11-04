@@ -16,6 +16,12 @@ export const expensesHandleKeyDown = (e) => {
   }
 };
 
+export const allUsersHandleKeyDown = (e) => {
+  if (e.key === "Enter") {
+    searchUsers();
+  }
+};
+
 // -----------------------------------------------------------
 
 // Search User Dashboard
@@ -184,7 +190,7 @@ export async function Pay(
 
   try {
     const response = await fetch(
-      "http://localhost:3001/receipts/createReceipt",
+      "http://localhost:3000/receipts/createReceipt",
       {
         method: "POST",
         headers: {
@@ -214,3 +220,9 @@ export function searchExpenses() {
 }
 
 // -----------------------------------------------------------
+
+// Search Users
+export function searchUsers() {
+  alert("searchUsers");
+  console.log("searchUsers");
+}
