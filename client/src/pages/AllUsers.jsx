@@ -8,7 +8,7 @@ export default function AllUsers() {
   const [fetchError, setFetchError] = useState(false);
 
   useEffect(() => {
-    fetch("http://localhost:3000/users/getAllUsers")
+    fetch("http://localhost:3001/users/getAllUsers")
       .then((res) => {
         if (!res.ok) {
           throw new Error("Failed to fetch users");
